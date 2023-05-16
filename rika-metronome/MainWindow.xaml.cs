@@ -31,7 +31,7 @@ namespace rika_metronome
             images[4] = img6;
             images[5] = img7;
             images[6] = img8;
-            imgCount = 3;
+            imgCount = 2;
             setImage();
             startTick = sw.ElapsedMilliseconds;
             slider.Maximum = MAX_TEMPO;
