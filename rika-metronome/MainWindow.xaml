@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:rika_metronome"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="MainWindow" Height="530" Width="640">
     <Grid>
         <Grid.RowDefinitions>
@@ -21,17 +22,16 @@
             <ColumnDefinition Width="40"/>
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
-        <Border Width="640" Height="360" BorderBrush="Black" BorderThickness="3" Grid.Row="0" Grid.ColumnSpan="5">
-            <Canvas Width="634" Height="357">
-                <Image x:Name="img2" Width="640" Height="360" Source="img/2.jpg" />
-                <Image x:Name="img3" Width="640" Height="360" Source="img/3.jpg" />
-                <Image x:Name="img4" Width="640" Height="360" Source="img/4.jpg" />
-                <Image x:Name="img5" Width="640" Height="360" Source="img/5.jpg" />
-                <Image x:Name="img6" Width="640" Height="360" Source="img/6.jpg" />
-                <Image x:Name="img7" Width="640" Height="360" Source="img/7.jpg" />
-                <Image x:Name="img8" Width="640" Height="360" Source="img/8.jpg" />
-            </Canvas>
-        </Border>
+        <Canvas Width="640" Height="360" Grid.Row="0" Grid.ColumnSpan="5">
+            <Image x:Name="img2" Width="640" Height="360" Source="img/2.jpg" />
+            <Image x:Name="img3" Width="640" Height="360" Source="img/3.jpg" />
+            <Image x:Name="img4" Width="640" Height="360" Source="img/4.jpg" />
+            <Image x:Name="img5" Width="640" Height="360" Source="img/5.jpg" />
+            <Image x:Name="img6" Width="640" Height="360" Source="img/6.jpg" />
+            <Image x:Name="img7" Width="640" Height="360" Source="img/7.jpg" />
+            <Image x:Name="img8" Width="640" Height="360" Source="img/8.jpg" />
+            <Border Background="Black" Width="640" Height="5" Canvas.Top="355" />
+        </Canvas>
         <Viewbox Stretch="uniform" Margin="15"
                 Grid.Row="1"
                 Grid.Column="0"
