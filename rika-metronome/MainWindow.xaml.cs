@@ -98,5 +98,20 @@ namespace rika_metronome
             metoronomeCount = 0;
         }
 
+        private void ClickDecreaseTempo(object sender, RoutedEventArgs e)
+        {
+            tempo--;
+            if (tempo < 10) tempo = 10;
+            if (tempoText != null) tempoText.Text = tempo.ToString();
+            if (slider != null) slider.Value = tempo;
+        }
+
+        private void ClickIncreaseTempo(object sender, RoutedEventArgs e)
+        {
+            tempo++;
+            if (tempo > MAX_TEMPO) tempo = MAX_TEMPO;
+            if (tempoText != null) tempoText.Text = tempo.ToString();
+            if (slider != null) slider.Value = tempo;
+        }
     }
 }

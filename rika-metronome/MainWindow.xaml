@@ -46,7 +46,7 @@
         </Viewbox>
         <Viewbox Stretch="uniform" Margin="7"
             Grid.Column="1" Grid.Row="2">
-            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" VerticalAlignment="Center">
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" VerticalAlignment="Center" Click="ClickDecreaseTempo">
                 <Viewbox Stretch="uniform" Margin="5">
                     <Image Source="lBtn.png" />
                 </Viewbox>
@@ -61,7 +61,7 @@
             Grid.Column="2" Grid.Row="2" ValueChanged="SliderValueChanged" Value="120"/>
         <Viewbox Stretch="uniform" Margin="7"
             Grid.Column="3" Grid.Row="2">
-            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" VerticalAlignment="Center">
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" VerticalAlignment="Center" Click="ClickIncreaseTempo">
                 <Viewbox Stretch="uniform" Margin="5">
                     <Image Source="rBtn.png" />
                 </Viewbox>
