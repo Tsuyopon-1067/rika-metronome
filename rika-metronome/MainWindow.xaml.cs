@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Threading.Tasks;
 
 namespace rika_metronome
 {
@@ -22,6 +12,14 @@ namespace rika_metronome
     public partial class MainWindow : Window
     {
         Image[] images = new Image[8];
+        private int imgCount = 3;
+        private int metoronomeCount = 0;
+        int tempo = 120;
+        double frame;
+        long startTick;
+        bool isStart = false;
+        System.Diagnostics.Stopwatch sw = System.Diagnostics.Stopwatch.StartNew();
+        const int MAX_TEMPO = 300;
         public MainWindow()
         {
             InitializeComponent();
@@ -36,15 +34,9 @@ namespace rika_metronome
             imgCount = 3;
             setImage();
             startTick = sw.ElapsedMilliseconds;
+            slider.Maximum = MAX_TEMPO;
         }
 
-        private int imgCount = 3;
-        private int metoronomeCount = 0;
-        int tempo = 120;
-        double frame;
-        long startTick;
-        bool isStart = false;
-        System.Diagnostics.Stopwatch sw = System.Diagnostics.Stopwatch.StartNew();
         private async void ClickStartButton(object sender, RoutedEventArgs e)
         {
             isStart = !isStart;
@@ -86,7 +78,25 @@ namespace rika_metronome
 
         private void SliderValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            tempo = (int)slider.Value;
+            if (slider != null) tempo = (int)slider.Value;
+            if (tempoText != null) tempoText.Text = tempo.ToString();
+            startTick = sw.ElapsedMilliseconds;
+            metoronomeCount = 0;
         }
+
+
+        private void tempoTextChanged(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key != Key.Enter) return;
+            if (tempoText != null) int.TryParse(tempoText.Text, out tempo);
+            if (tempo > MAX_TEMPO) tempo = MAX_TEMPO;
+            else if (tempo < 10) tempo = 10;
+            if (tempoText != null) tempoText.Text = tempo.ToString();
+
+            if (slider != null) slider.Value = tempo;
+            startTick = sw.ElapsedMilliseconds;
+            metoronomeCount = 0;
+        }
+
     }
 }

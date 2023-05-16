@@ -55,10 +55,10 @@
         <Slider x:Name="slider" VerticalAlignment="Center"
             LargeChange="10"
             SmallChange="1" 
-            Maximum="1000"
+            Maximum="600"
             Minimum="1" 
             Margin="0"
-            Grid.Column="2" Grid.Row="2" ValueChanged="SliderValueChanged"/>
+            Grid.Column="2" Grid.Row="2" ValueChanged="SliderValueChanged" Value="120"/>
         <Viewbox Stretch="uniform" Margin="7"
             Grid.Column="3" Grid.Row="2">
             <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" VerticalAlignment="Center">
@@ -77,7 +77,7 @@
                      Grid.Column="2"
                      FontWeight="Bold" 
                      Margin="5" 
-                     FontFamily="Yu Gothic" />
+                     FontFamily="Yu Gothic" KeyDown="tempoTextChanged" />
             <TextBlock
                      Text="BPM" FontSize="28" 
                      Grid.Row="1"
