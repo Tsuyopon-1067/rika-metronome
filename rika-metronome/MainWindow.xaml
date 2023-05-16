@@ -71,7 +71,7 @@
             Grid.Column="2"
             Orientation="Horizontal"
             HorizontalAlignment="Center">
-            <TextBox x:Name="NowWordTextBox" 
+            <TextBox x:Name="tempoText" 
                      Text="120" FontSize="48" 
                      Grid.Row="1"
                      Grid.Column="2"
