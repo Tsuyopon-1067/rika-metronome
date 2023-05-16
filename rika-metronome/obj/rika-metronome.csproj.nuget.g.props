@@ -15,4 +15,7 @@
     <SourceRoot Include="C:\Program Files (x86)\Microsoft SDKs\NuGetPackagesFallback\" />
     <SourceRoot Include="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\" />
   </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMaterialDesignThemes Condition=" '$(PkgMaterialDesignThemes)' == '' ">C:\Users\Tsuyoshi\.nuget\packages\materialdesignthemes\4.5.0</PkgMaterialDesignThemes>
+  </PropertyGroup>
 </Project>

@@ -8,4 +8,36 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="img\1.jpg" />
+    <None Remove="img\2.jpg" />
+    <None Remove="img\3.jpg" />
+    <None Remove="img\4.jpg" />
+    <None Remove="img\5.jpg" />
+    <None Remove="img\6.jpg" />
+    <None Remove="img\7.jpg" />
+    <None Remove="img\8.jpg" />
+    <None Remove="lBtn.png" />
+    <None Remove="pose.png" />
+    <None Remove="rBtn.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignInXamlToolkitAddOns" Version="0.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\1.jpg" />
+    <Resource Include="img\2.jpg" />
+    <Resource Include="img\3.jpg" />
+    <Resource Include="img\4.jpg" />
+    <Resource Include="img\5.jpg" />
+    <Resource Include="img\6.jpg" />
+    <Resource Include="img\7.jpg" />
+    <Resource Include="img\8.jpg" />
+    <Resource Include="lBtn.png" />
+    <Resource Include="pose.png" />
+    <Resource Include="rBtn.png" />
+  </ItemGroup>
+
 </Project>

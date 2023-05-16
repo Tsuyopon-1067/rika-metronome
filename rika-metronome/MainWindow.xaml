@@ -4,9 +4,88 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:rika_metronome"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="530" Width="640">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="360"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Border Width="640" Height="360" BorderBrush="Black" BorderThickness="3" Grid.Row="0" Grid.ColumnSpan="5">
+            <Canvas Width="634" Height="357">
+                <Image x:Name="img1" Width="640" Height="360" Source="img/1.jpg" />
+                <Image x:Name="img2" Width="640" Height="360" Source="img/2.jpg" />
+                <Image x:Name="img3" Width="640" Height="360" Source="img/3.jpg" />
+                <Image x:Name="img4" Width="640" Height="360" Source="img/4.jpg" />
+                <Image x:Name="img5" Width="640" Height="360" Source="img/5.jpg" />
+                <Image x:Name="img6" Width="640" Height="360" Source="img/6.jpg" />
+                <Image x:Name="img7" Width="640" Height="360" Source="img/7.jpg" />
+                <Image x:Name="img8" Width="640" Height="360" Source="img/8.jpg" />
+            </Canvas>
+        </Border>
+        <Viewbox Stretch="uniform" Margin="15"
+                Grid.Row="1"
+                Grid.Column="0"
+                 Grid.RowSpan="3">
+            <Button Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                Cursor="Hand" Click="ClickStartButton">
+                <Viewbox Stretch="uniform" Margin="6">
+                    <Image x:Name="StartStopIconImage" Source="/rBtn.png" />
+                </Viewbox>
+            </Button>
+        </Viewbox>
+        <Viewbox Stretch="uniform" Margin="7"
+            Grid.Column="1" Grid.Row="2">
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" VerticalAlignment="Center">
+                <Viewbox Stretch="uniform" Margin="5">
+                    <Image Source="lBtn.png" />
+                </Viewbox>
+            </Button>
+        </Viewbox>
+        <Slider x:Name="slider" VerticalAlignment="Center"
+            LargeChange="10"
+            SmallChange="1" 
+            Maximum="1000"
+            Minimum="1" 
+            Margin="0"
+            Grid.Column="2" Grid.Row="2" ValueChanged="SliderValueChanged"/>
+        <Viewbox Stretch="uniform" Margin="7"
+            Grid.Column="3" Grid.Row="2">
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" VerticalAlignment="Center">
+                <Viewbox Stretch="uniform" Margin="5">
+                    <Image Source="rBtn.png" />
+                </Viewbox>
+            </Button>
+        </Viewbox>
+        <StackPanel Grid.Row="1"
+            Grid.Column="2"
+            Orientation="Horizontal"
+            HorizontalAlignment="Center">
+            <TextBox x:Name="NowWordTextBox" 
+                     Text="120" FontSize="48" 
+                     Grid.Row="1"
+                     Grid.Column="2"
+                     FontWeight="Bold" 
+                     Margin="5" 
+                     FontFamily="Yu Gothic" />
+            <TextBlock
+                     Text="BPM" FontSize="28" 
+                     Grid.Row="1"
+                     Grid.Column="2"
+                     FontWeight="Bold" 
+                     Margin="5" 
+                     VerticalAlignment="Bottom"
+                     FontFamily="Yu Gothic" />
+        </StackPanel>
     </Grid>
 </Window>

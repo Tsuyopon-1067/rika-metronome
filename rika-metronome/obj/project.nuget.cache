@@ -1,8 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "uvQyWKi+uCx+qPhbAeD1y5xpgs3aolAzCd/8PgFKApuklK0lUVe76JK4lgfZ1oTG2p+nz0NVP0NXyA+fuWWYhA==",
+  "dgSpecHash": "uPkvoXhafkSZBfBjpVwMwK0OCTMkpVue1ikKMjgxvLhsGFEpFgNA9/dNB9bA0Xyqe6uY96g9Xz2zFw1jXu3uOg==",
   "success": true,
   "projectFilePath": "D:\\Users\\Tsuyoshi\\Documents\\C#\\rika-metronome\\rika-metronome\\rika-metronome.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Tsuyoshi\\.nuget\\packages\\dynamitey\\2.0.10.189\\dynamitey.2.0.10.189.nupkg.sha512",
+    "C:\\Users\\Tsuyoshi\\.nuget\\packages\\extendedwpfconverters\\2.0.3\\extendedwpfconverters.2.0.3.nupkg.sha512",
+    "C:\\Users\\Tsuyoshi\\.nuget\\packages\\extendedwpfvisualtreehelper\\2.0.2\\extendedwpfvisualtreehelper.2.0.2.nupkg.sha512",
+    "C:\\Users\\Tsuyoshi\\.nuget\\packages\\materialdesigncolors\\2.0.6\\materialdesigncolors.2.0.6.nupkg.sha512",
+    "C:\\Users\\Tsuyoshi\\.nuget\\packages\\materialdesigninxamltoolkitaddons\\0.0.6\\materialdesigninxamltoolkitaddons.0.0.6.nupkg.sha512",
+    "C:\\Users\\Tsuyoshi\\.nuget\\packages\\materialdesignthemes\\4.5.0\\materialdesignthemes.4.5.0.nupkg.sha512",
+    "C:\\Users\\Tsuyoshi\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
+    "C:\\Users\\Tsuyoshi\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\Tsuyoshi\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\Tsuyoshi\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512"
+  ],
   "logs": []
 }
