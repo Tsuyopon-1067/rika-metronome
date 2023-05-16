@@ -20,21 +20,22 @@ namespace rika_metronome
         bool isStart = false;
         System.Diagnostics.Stopwatch sw = System.Diagnostics.Stopwatch.StartNew();
         const int MAX_TEMPO = 300;
+        private System.Media.SoundPlayer player = null;
         public MainWindow()
         {
             InitializeComponent();
-            images[0] = img1;
-            images[1] = img2;
-            images[2] = img3;
-            images[3] = img4;
-            images[4] = img5;
-            images[5] = img6;
-            images[6] = img7;
-            images[7] = img8;
+            images[0] = img2;
+            images[1] = img3;
+            images[2] = img4;
+            images[3] = img5;
+            images[4] = img6;
+            images[5] = img7;
+            images[6] = img8;
             imgCount = 3;
             setImage();
             startTick = sw.ElapsedMilliseconds;
             slider.Maximum = MAX_TEMPO;
+            player = new System.Media.SoundPlayer("po.wav");
         }
 
         private async void ClickStartButton(object sender, RoutedEventArgs e)
@@ -49,6 +50,7 @@ namespace rika_metronome
             while(true)
             {
                 frame = 60000*2/tempo/14;
+                if (getIdx(imgCount) == 3) player.Play();
                 await tick();
                 if (!isStart && getIdx(imgCount) == 3) break;
             }
@@ -65,14 +67,14 @@ namespace rika_metronome
         {
             imgCount++;
             metoronomeCount++;
-            if (imgCount >= 14) imgCount = 0;
+            if (imgCount >= 12) imgCount = 0;
             int idx = getIdx(imgCount);
-            for (int i = 0; i < 8; i++) images[i].Visibility = Visibility.Hidden;
+            for (int i = 0; i < 7; i++) images[i].Visibility = Visibility.Hidden;
             images[idx].Visibility = Visibility.Visible;
         }
         private int getIdx(int k)
         {
-            if (k >= 8) k = 14 - k;
+            if (k >= 7) k = 12 - k;
             return k;
         }
 

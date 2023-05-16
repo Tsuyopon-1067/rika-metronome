@@ -23,7 +23,6 @@
         </Grid.ColumnDefinitions>
         <Border Width="640" Height="360" BorderBrush="Black" BorderThickness="3" Grid.Row="0" Grid.ColumnSpan="5">
             <Canvas Width="634" Height="357">
-                <Image x:Name="img1" Width="640" Height="360" Source="img/1.jpg" />
                 <Image x:Name="img2" Width="640" Height="360" Source="img/2.jpg" />
                 <Image x:Name="img3" Width="640" Height="360" Source="img/3.jpg" />
                 <Image x:Name="img4" Width="640" Height="360" Source="img/4.jpg" />
